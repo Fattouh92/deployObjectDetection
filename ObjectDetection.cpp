@@ -7,7 +7,7 @@ ObjectDetectionWrapper::ObjectDetectionWrapper(int32 input_width_, int32 input_h
     output_tensor_name=output_tensor_name_;
 }
 
-Status ObjectDetectionWrapper::load_graph(string graph_path) {
+Status ObjectDetectionWrapper::load_graph(const string& graph_path) {
     Status load_graph_status =
             ReadBinaryProto(tensorflow::Env::Default(), graph_path, &graph_def);
     if (!load_graph_status.ok()) {
@@ -21,7 +21,7 @@ Status ObjectDetectionWrapper::load_graph(string graph_path) {
     return session_create_status;
 }
 
-Tensor ObjectDetectionWrapper::readTensorFromMat(Mat &mat) {
+Tensor ObjectDetectionWrapper::readTensorFromMat(const Mat &mat) {
     int depth = mat.channels();
     int batch = 1;
 
@@ -53,7 +53,7 @@ Tensor ObjectDetectionWrapper::readTensorFromMat(Mat &mat) {
     return inputTensor;
 }
 
-vector<Tensor> ObjectDetectionWrapper::forward_path(Mat camera_image) {
+vector<Tensor> ObjectDetectionWrapper::forward_path(const Mat& camera_image) {
     Mat input_mat;
     vector<Tensor> outputs;
     Tensor inputTensor;

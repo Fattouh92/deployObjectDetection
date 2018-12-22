@@ -38,9 +38,9 @@ class ObjectDetectionWrapper {
 public:
     ObjectDetectionWrapper(int32 input_width_, int32 input_height_, const string& input_tensor_name_, const string& output_tensor_name_);
 
-    Status load_graph(string);
-    vector<Tensor> forward_path(Mat);
-    Tensor readTensorFromMat(Mat &mat);
+    Status load_graph(const string&);
+    vector<Tensor> forward_path(const Mat&);
+    Tensor readTensorFromMat(const Mat&);
 };
 
 
