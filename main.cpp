@@ -3,7 +3,7 @@
 
 int main() {
 
-    // TODO: provide your working directory where input image and frozen graph residegraph
+    // TODO: provide your working directory where input image and frozen graph reside
     string root_dir = "/home/mohamed/code/deployObjectDetection/";
     string image = "data/grace_hopper.jpg";
     string graph = "data/inception_v3_2016_08_28_frozen.pb";
