@@ -3,6 +3,11 @@ Utility class around C++ TensorFlow for multi-purpose deep learning tasks deploy
 
 Check my [medium story](https://medium.com/@mohamedtamer92/tensorflow-how-to-export-freeze-models-with-python-api-and-deploy-object-detection-models-with-a6bbb74afe1c) for detailed documentation and other background information
 
+### Features
+* Load a frozen graph into session
+* Run forward path on the loaded graph
+* Convert `OpenCV: cv::Mat` to `TensorFlow: tf::Tensor`
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
